@@ -7,7 +7,6 @@ import { router } from "./routes";
 // Inicindo aplicação 
 const app = express();
 
-// Middlewares
 app.use(express.json()) 
 app.use(cors()) // Abilitando cors para todos
 app.use(router)
