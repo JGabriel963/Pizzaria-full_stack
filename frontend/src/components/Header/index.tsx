@@ -21,7 +21,7 @@ export const Header: React.FC = () => {
                     </Link>
 
                     <Link href="/product">
-                        Categoria
+                        Cardápio
                     </Link>
 
                     <button onClick={signOut}>

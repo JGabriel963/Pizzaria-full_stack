@@ -5,7 +5,9 @@ import styles from './styles.module.scss'
 import { toast } from "react-toastify"
 import { setupAPIClient } from "@/services/api"
 
-const Category: React.FC = () => {
+import { canSSRAuth } from "@/utils/canSSRAuth"
+
+export default function Category() {
     const [name, setName] = useState('')
 
     async function handleSubmit(event: FormEvent) {
@@ -59,4 +61,10 @@ const Category: React.FC = () => {
     )
 }
 
-export default Category
+export const getServerSideProps = canSSRAuth(async (ctx) => {
+
+    return {
+        props: {}
+    }
+
+})
